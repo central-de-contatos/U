@@ -1,0 +1,175 @@
+:root {
+    /* Cores principais - inspiradas no Exército Brasileiro */
+    --primary-color: #004B8D; /* Azul escuro do EB */
+    --tertiary-color: #FFCD00; /* Amarelo dourado (para detalhes) */
+    --highlight-color: #E23D28; /* Vermelho forte para chamadas de atenção e destaques */
+    --secondary-hover-color: #FFA500; /* Um laranja para hover nos botões amarelos */
+
+
+    /* Cores de fundo e texto */
+    --background-color: #000000; /* Fundo totalmente preto */
+    --text-color: #F8F8F8; /* Branco suave para o texto */
+    --card-background: #1A1A1A; /* Um cinza bem escuro para o container */
+
+    /* Outras variáveis */
+    --border-radius: 10px;
+    --box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); /* Sombra mais visível no fundo escuro */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid var(--primary-color);
+    position: relative; /* Necessário para posicionar o detalhe vermelho */
+    overflow: hidden; /* Garante que o detalhe não vaze */
+}
+
+/* Detalhe vermelho no canto superior direito */
+.container::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    background: var(--highlight-color);
+    transform: rotate(45deg);
+    z-index: 0; /* Garante que fique atrás do conteúdo */
+    box-shadow: 0 0 20px rgba(226, 61, 40, 0.7);
+}
+
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid var(--tertiary-color); /* Borda dourada */
+    box-shadow: 0 0 15px rgba(255, 205, 0, 0.5);
+    position: relative; /* Para garantir que a imagem fique sobre o detalhe vermelho */
+    z-index: 1;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: var(--tertiary-color); /* Título em amarelo dourado */
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    position: relative;
+    z-index: 1;
+}
+
+.link-button {
+    display: block;
+    width: calc(100% - 20px);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    background-color: var(--primary-color); /* Padrão azul */
+    color: #fff;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda branca suave */
+    cursor: pointer;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+/* Alterna as cores dos botões */
+.link-button:nth-of-type(1) { /* Primeiro botão: Azul */
+    background-color: var(--primary-color);
+}
+.link-button:nth-of-type(2) { /* Segundo botão: Vermelho */
+    background-color: var(--highlight-color);
+}
+.link-button:nth-of-type(3) { /* Terceiro botão: Amarelo */
+    background-color: var(--tertiary-color);
+    color: var(--background-color); /* Texto escuro no botão amarelo */
+}
+
+/* Hover para todos os botões */
+.link-button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    /* Ajustes de hover específicos para cada cor */
+}
+
+/* Hover específico para o botão azul */
+.link-button:nth-of-type(1):hover {
+    background-color: color-mix(in srgb, var(--primary-color) 80%, white); /* Azul mais claro no hover */
+}
+
+/* Hover específico para o botão vermelho */
+.link-button:nth-of-type(2):hover {
+    background-color: color-mix(in srgb, var(--highlight-color) 80%, white); /* Vermelho mais claro no hover */
+}
+
+/* Hover específico para o botão amarelo */
+.link-button:nth-of-type(3):hover {
+    background-color: var(--secondary-hover-color); /* Laranja no hover do amarelo */
+}
+
+
+.footer {
+    margin-top: 30px;
+    font-size: 0.85em;
+    color: #999;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.6em;
+    }
+    .link-button {
+        font-size: 1em;
+        padding: 12px 15px;
+    }
+    .container::before {
+        width: 60px;
+        height: 60px;
+        top: -15px;
+        right: -15px;
+    }
+}
