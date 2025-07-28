@@ -173,3 +173,12 @@ p {
         right: -15px;
     }
 }
+.redesociais img {
+    display: block;
+    max-width: 125px;
+
+    display: flex; /* Transforma o contêiner em um flex container */
+    justify-content: flex-end; /* Alinha os itens filhos à direita */
+    /* Você pode adicionar outras propriedades flexbox aqui se necessário, como align-items, gap, etc. */
+
+}
