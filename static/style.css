@@ -1,19 +1,19 @@
 :root {
-    /* Cores principais - inspiradas no Exército Brasileiro */
-    --primary-color: #004B8D; /* Azul escuro do EB */
-    --tertiary-color: #FFCD00; /* Amarelo dourado (para detalhes) */
-    --highlight-color: #E23D28; /* Vermelho forte para chamadas de atenção e destaques */
-    --secondary-hover-color: #FFA500; /* Um laranja para hover nos botões amarelos */
+    /* Cores que tão na trend - inspiradas na pegada do Exército Brasileiro */
+    --primary-color: #004B8D; /* Azulzão bolado do EB */
+    --tertiary-color: #FFCD00; /* Amarelão que brilha (pros detalhes que dão o toque) */
+    --highlight-color: #E23D28; /* Vermelhão no hype, pra chamar na responsa e destacar tudo */
+    --secondary-hover-color: #FFA500; /* Um laranjinha style pra quando tu passar o mouse nos botões amarelos, tipo um glow up */
 
 
-    /* Cores de fundo e texto */
-    --background-color: #000000; /* Fundo totalmente preto */
-    --text-color: #F8F8F8; /* Branco suave para o texto */
-    --card-background: #1A1A1A; /* Um cinza bem escuro para o container */
+    /* Cores de fundo e do texto (pra ficar no drip) */
+    --background-color: #000000; /* Fundo que é o puro suco do estilo, pretão total! */
+    --text-color: #F8F8F8; /* Brancão suave pro texto, pra não dar caô na leitura */
+    --card-background: #1A1A1A; /* Um cinza escurão pro card, tipo um segredo bem guardado */
 
-    /* Outras variáveis */
-    --border-radius: 10px;
-    --box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); /* Sombra mais visível no fundo escuro */
+    /* Outras paradas que importam */
+    --border-radius: 10px; /* Borda arredondada pra não ter ponta, suave na nave */
+    --box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); /* Sombra pra dar aquele 3D no fundo escuro, diferenciado */
 }
 
 body {
@@ -39,11 +39,11 @@ body {
     text-align: center;
     box-sizing: border-box;
     border: 1px solid var(--primary-color);
-    position: relative; /* Necessário para posicionar o detalhe vermelho */
-    overflow: hidden; /* Garante que o detalhe não vaze */
+    position: relative; /* Essencial pra posicionar o detalhe vermelho no lugar certo, tá ligado? */
+    overflow: hidden; /* Pra garantir que a parada não vaze pra fora do contêiner, no pique */
 }
 
-/* Detalhe vermelho no canto superior direito */
+/* Detalhe vermelhão ali no canto de cima, à direita, pra dar aquele toque especial */
 .container::before {
     content: '';
     position: absolute;
@@ -53,7 +53,7 @@ body {
     height: 80px;
     background: var(--highlight-color);
     transform: rotate(45deg);
-    z-index: 0; /* Garante que fique atrás do conteúdo */
+    z-index: 0; /* Deixa ele por baixo do conteúdo, pra não flopar a hierarquia */
     box-shadow: 0 0 20px rgba(226, 61, 40, 0.7);
 }
 
@@ -61,18 +61,18 @@ body {
 .profile-picture {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
+    border-radius: 50%; /* Pra deixar a foto redondinha, no style */
     object-fit: cover;
     margin-bottom: 20px;
-    border: 4px solid var(--tertiary-color); /* Borda dourada */
+    border: 4px solid var(--tertiary-color); /* Borda dourada pra dar um luxo e um brilho */
     box-shadow: 0 0 15px rgba(255, 205, 0, 0.5);
-    position: relative; /* Para garantir que a imagem fique sobre o detalhe vermelho */
+    position: relative; /* Pra foto ficar por cima do detalhe vermelho, sem erro */
     z-index: 1;
 }
 
 h1 {
     font-size: 1.8em;
-    color: var(--tertiary-color); /* Título em amarelo dourado */
+    color: var(--tertiary-color); /* Títulozão naquele amarelo dourado, pra explodir na tela */
     margin-bottom: 10px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     position: relative;
@@ -93,53 +93,57 @@ p {
     width: calc(100% - 20px);
     padding: 15px 20px;
     margin-bottom: 15px;
-    background-color: var(--primary-color); /* Padrão azul */
-    color: #fff;
-    text-decoration: none;
-    border-radius: var(--border-radius);
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    font-weight: 600;
+    background-color: var(--primary-color); /* A cor padrão é o azulzão */
+    color: #fff; /* Texto branco, pra aparecer e dar aquele contraste top */
+    text-decoration: none; /* Sem aquele sublinhado que deixa feio */
+    border-radius: var(--border-radius); /* Borda arredondada pros botões, no estilo */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transição suave pra quando tu passar o mouse, fluidez total */
+    font-weight: 600; /* Texto mais encorpado, pra dar moral */
     font-size: 1.1em;
     box-sizing: border-box;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda branca suave */
-    cursor: pointer;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda branquinha de leve, tipo um detalhe sutil */
+    cursor: pointer; /* Pra avisar que dá pra clicar, tipo um call to action */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra no texto, pra dar aquele tchan a mais */
     position: relative;
     z-index: 1;
 }
 
-/* Alterna as cores dos botões */
-.link-button:nth-of-type(1) { /* Primeiro botão: Azul */
+/* Mexendo nas cores dos botões, um por um, pra deixar tudo no esquema */
+.link-button:nth-of-type(1) { /* Primeiro botão: "Meu portfólio no LinkedIn" (Azulzão) */
     background-color: var(--primary-color);
 }
-.link-button:nth-of-type(2) { /* Segundo botão: Vermelho */
-    background-color: var(--highlight-color);
+.link-button:nth-of-type(2) { /* Segundo botão: "Acesse Meu Site Oficial" (Gradiente verde, preto e azul, estilo exército, militar vibe) */
+    background: linear-gradient(90deg, #00704A 0%, #000000 50%, var(--primary-color) 100%);
+    color: #fff; /* Texto branquinho pra não sumir no gradiente, tem que destacar */
+    border: none; /* Tira a borda, gradiente é mais chique e limpo */
 }
-.link-button:nth-of-type(3) { /* Terceiro botão: Amarelo */
-    background-color: var(--tertiary-color);
-    color: var(--background-color); /* Texto escuro no botão amarelo */
+.link-button:nth-of-type(3) { /* Terceiro botão: "Contato via Instagram" (Gradiente do Insta, aquele que todo mundo conhece) */
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #fff; /* Texto branco pra aparecer pra valer no gradiente vibrante */
+    border: none; /* Sem borda pra não brigar com a arte do gradiente */
 }
 
-/* Hover para todos os botões */
+/* Efeito de hover pra todos os botões (quando passar o mouse, sacou? Tipo, reagir à interação) */
 .link-button:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    /* Ajustes de hover específicos para cada cor */
+    transform: translateY(-3px) scale(1.02); /* Dá aquela levantadinha e crescidinha de leve, pra mostrar que tá vivo */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra pra aparecer mais ainda, tipo um holofote */
+    /* Ajustes no hover pra cada cor de botão, individualmente, pra ficar tudo personalizado */
 }
 
-/* Hover específico para o botão azul */
+/* Hover só pro botão azul (o primeiro, daquele jeito) */
 .link-button:nth-of-type(1):hover {
-    background-color: color-mix(in srgb, var(--primary-color) 80%, white); /* Azul mais claro no hover */
+    background-color: color-mix(in srgb, var(--primary-color) 80%, white); /* Azul fica um pouco mais claro no hover, dando um toque */
 }
 
-/* Hover específico para o botão vermelho */
+/* Hover só pro botão do Exército Brasileiro (o segundo, verde/preto/azul) */
 .link-button:nth-of-type(2):hover {
-    background-color: color-mix(in srgb, var(--highlight-color) 80%, white); /* Vermelho mais claro no hover */
+    /* Gradiente muda um pouquinho pra dar um efeito legal no hover, tipo um refresh */
+    background: linear-gradient(90deg, #00885a 0%, #1A1A1A 50%, color-mix(in srgb, var(--primary-color) 90%, white) 100%);
 }
 
-/* Hover específico para o botão amarelo */
+/* Hover só pro botão do Instagram (o terceiro, o insta da galera) */
 .link-button:nth-of-type(3):hover {
-    background-color: var(--secondary-hover-color); /* Laranja no hover do amarelo */
+    background: linear-gradient(45deg, #f3a653 0%, #ea7b59 25%, #e03f56 50%, #d23a78 75%, #c02a99 100%);
 }
 
 
@@ -151,7 +155,7 @@ p {
     z-index: 1;
 }
 
-/* Responsividade */
+/* Pra ficar responsivo, tipo, se a tela for pequena ele se adapta, sem perder o estilo */
 @media (max-width: 600px) {
     body {
         padding: 15px;
@@ -173,12 +177,21 @@ p {
         right: -15px;
     }
 }
+ul.redesociais {
+    display: flex;
+    list-style: none; /* Tira aqueles pontinhos chatos da lista, pra ficar mais clean */
+    justify-content: center; /* Centraliza as imagens na moral, sem stress */
+    padding: 0; /* Zera o padding padrão da lista, pra não dar caô no alinhamento */
+    margin-top: 20px; /* Dá um espacinho em cima das imagens, pra respirar */
+    flex-wrap: wrap; /* Faz as imagens quebrarem a linha se a tela for miúda, adaptando de boa */
+}
 .redesociais img {
     display: block;
-    max-width: 125px;
+    max-width: 35px;
+    margin: 15px;
+    transition: transform 0.2s ease; /* Transição suave pra quando passar o mouse, sem travamentos */
+}
 
-    display: flex; /* Transforma o contêiner em um flex container */
-    justify-content: flex-end; /* Alinha os itens filhos à direita */
-    /* Você pode adicionar outras propriedades flexbox aqui se necessário, como align-items, gap, etc. */
-
+.redesociais li:hover img {
+    transform: scale(1.15); /* Efeito de zoom maneiro quando passar o mouse na imagem, pra dar um up */
 }
